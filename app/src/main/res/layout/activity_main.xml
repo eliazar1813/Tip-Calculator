@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Cal_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- more goes here -->
+
+
+    <EditText
+        android:id="@+id/editText_BillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:ems="20"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="6"
+        android:shadowColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_BillAmount"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_BillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:background="#0AA4EB"
+        android:contentDescription="@string/EnterAmountShow"
+        android:gravity="center"
+        android:hint="@string/MoneyAmount"
+        android:labelFor="@+id/editText_BillAmount"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView_TipPercent"
+        android:layout_width="59dp"
+        android:layout_height="31dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginStart="12dp"
+        android:gravity="center_vertical"
+        android:hint="@string/TipPercentShow"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/percentSeekBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/percentSeekBar"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
+        android:layout_width="298dp"
+        android:layout_height="30dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_marginBottom="32dp"
+        android:foregroundGravity="center_horizontal"
+        android:progressTint="#3F51B5"
+        android:thumbTint="#0E9CE9"
+        android:translationX="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_TipShow"
+        app:layout_constraintStart_toEndOf="@+id/textView_TipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroup"
+        app:layout_constraintVertical_bias="0.835"
+        app:tickMarkTint="#0340CA" />
+
+    <TextView
+        android:id="@+id/textView_TipAmount"
+        android:layout_width="58dp"
+        android:layout_height="49dp"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginStart="12dp"
+        android:gravity="fill_horizontal|center_vertical"
+        android:hint="@string/tipShow"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColorHint="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_TipShow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TipPercent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView_TipShow"
+        style="@android:style/Widget.DeviceDefault.Light.TextView"
+        android:layout_width="239dp"
+        android:layout_height="42dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginBottom="44dp"
+        android:background="#2196F3"
+        android:gravity="center|center_horizontal"
+        android:hint="@string/Tip_amountShow"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:translationX="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_TotalShow"
+        app:layout_constraintStart_toEndOf="@+id/textView_TipAmount" />
+
+    <TextView
+        android:id="@+id/textView_TotalAmount"
+        android:layout_width="69dp"
+        android:layout_height="52dp"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginStart="12dp"
+        android:gravity="fill_horizontal|center_vertical"
+        android:hint="@string/TotalShow"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColorHint="#000000"
+        android:textCursorDrawable="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_TotalShow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TipAmount"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView_TotalShow"
+        style="@android:style/Widget.DeviceDefault.Light.TextView"
+        android:layout_width="142dp"
+        android:layout_height="49dp"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="272dp"
+        android:background="#2196F3"
+        android:gravity="center|center_horizontal"
+        android:hint="@string/TotalAmount"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:translationX="35dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/textView_TotalAmount"
+        app:layout_constraintTop_toBottomOf="@+id/SelectRounding" />
+
+    <TextView
+        android:id="@+id/SelectRounding"
+        android:layout_width="274dp"
+        android:layout_height="34dp"
+        android:text="@string/Options"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_BillAmount"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SelectRounding">
+
+        <RadioButton
+            android:id="@+id/NoRound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#1E80EF"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/no_rounded"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/TipRounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#1E80EF"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/tip_rounded"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/TotalRounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#1E80EF"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/total_rounded"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Total_Person"
+        android:layout_width="88dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/per_person_total"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TotalAmount" />
+
+    <TextView
+        android:id="@+id/PersonTotalAmount"
+        android:layout_width="135dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:background="#2196F3"
+        android:gravity="center"
+        android:hint="@string/PerPersonAmountTotal"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/Total_Person"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TotalShow" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="127dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TipShow" />
+
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/action_bar" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

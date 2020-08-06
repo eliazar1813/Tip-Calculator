@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="MoneyAmount">Enter Amount</string>
+    <string name="Total_ShowPreview">Total</string>
+    <string name="Zero_Preview">$0.0</string>
+    <string name="percent_preview">0%</string>
+    <string name="Tip_Preview">Tip</string>
+    <string name="TipTotalShow">$0.0</string>
+    <string name="EnterAmountShow">Enter Amount</string>
+    <string name="TipPercentShow">0%</string>
+    <string name="tipShow">Tip</string>
+    <string name="Tip_amountShow">$0.0</string>
+    <string name="TotalShow">Total</string>
+    <string name="TotalAmount">$0.0</string>
+    <string name="Options">Select Rounding Options</string>
+    <string name="no_rounded">No</string>
+    <string name="tip_rounded">Tip</string>
+    <string name="total_rounded">Total</string>
+    <string name="Toast_TotalAmount">Total will be rounded up!</string>
+    <string name="Toast_TipAmount">Tip will be rounded up!</string>
+    <string name="Toast_NoAmount">Exact Bill, Tip, Total.</string>
+    <string name="per_person_total">Per Person Total</string>
+    <string name="PerPersonAmountTotal">$0.0</string>
+    <string-array name="labels_array">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+    </string-array>
+</resources>
